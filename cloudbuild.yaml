@@ -26,3 +26,6 @@ steps:
       "--annotations", "commitId=${REVISION_ID}",
       "--images", "html-img=us-central1-docker.pkg.dev/prefab-faculty-438111-k7/gke-repo/html-img:${COMMIT_SHA}"
     ]
+    
+options:
+  logging: CLOUD_LOGGING_ONLY
