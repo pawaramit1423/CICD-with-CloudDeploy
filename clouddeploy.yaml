@@ -18,10 +18,10 @@ metadata:
  name: qsdev
 description: development cluster
 gke:
- cluster:  projects/$PROJECT_ID/locations/asia-east1-a/clusters/sanket-test-cluster
+ cluster:  projects/prefab-faculty-438111-k7/locations/us-central1-a/clusters/dev-cluster
 executionConfigs:
 - defaultPool:
-    serviceAccount: gke-sa@$PROJECT_ID.iam.gserviceaccount.com
+    serviceAccount: gke-cicd-hackathon-project@prefab-faculty-438111-k7.iam.gserviceaccount.com
   usages:
   - RENDER 
   - DEPLOY   
@@ -35,10 +35,10 @@ metadata:
 description: production cluster
 requireApproval: true
 gke:
- cluster:  projects/$PROJECT_ID//locations/asia-east1-a/clusters/sanket-prod-cluster
+ cluster:  projects/prefab-faculty-438111-k7/locations/us-central1-a/clusters/stage-cluster
 executionConfigs:
 - defaultPool:
-    serviceAccount: gke-sa@$PROJECT_ID.iam.gserviceaccount.com
+    serviceAccount: gke-cicd-hackathon-project@prefab-faculty-438111-k7.iam.gserviceaccount.com
   usages:
   - RENDER 
   - DEPLOY

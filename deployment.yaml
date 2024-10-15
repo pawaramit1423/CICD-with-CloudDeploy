@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: myapp
-        image: sanket-clouddeploy-image
+        image: html-img
         ports:
         - containerPort: 80
 ---
