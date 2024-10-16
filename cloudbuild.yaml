@@ -3,14 +3,14 @@
 steps:
 
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['build', '.', '-t', 'us-central1-docker.pkg.dev/prefab-faculty-438111-k7/gke-repo/html-img:${COMMIT_SHA}', '-f', 'Dockerfile']
+  args: ['build', '.', '-t', 'us-central1-docker.pkg.dev/prefab-faculty-438111-k7/gke-repo/html-img', '-f', 'Dockerfile']
 
 
 # Push the container image
 
 
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['push', 'us-central1-docker.pkg.dev/prefab-faculty-438111-k7/gke-repo/html-img:${COMMIT_SHA}']
+  args: ['push', 'us-central1-docker.pkg.dev/prefab-faculty-438111-k7/gke-repo/html-img']
 
 
 # Create release in Google Cloud Deploy
@@ -24,7 +24,7 @@ steps:
       "--delivery-pipeline", "gitops",
       "--region", "us-central1",
       "--annotations", "commitId=${REVISION_ID}",
-      "--images", "html-img=us-central1-docker.pkg.dev/prefab-faculty-438111-k7/gke-repo/html-img:${COMMIT_SHA}"
+      "--images", "html-img=us-central1-docker.pkg.dev/prefab-faculty-438111-k7/gke-repo/html-img:latest"
     ]
 
 # - name: gcr.io/google.com/cloudsdktool/cloud-sdk
