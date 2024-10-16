@@ -4,7 +4,7 @@ metadata:
   name: git-ops
 build:
   artifacts:
-  - image: gcr.io/$PROJECT_ID/sanket-gitops-image
+  - image: html-img=us-central1-docker.pkg.dev/prefab-faculty-438111-k7/gke-repo/html-img:latest
     docker:
       dockerfile: Dockerfile
 deploy:
